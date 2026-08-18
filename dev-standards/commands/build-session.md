@@ -13,6 +13,7 @@ This session builds exactly one thing. If `$ARGUMENTS` names it, restate it in o
 
 **Start at `docs/README.md`** — the index names every document and what it is for. Failing that, look for the canonical documents wherever they live (`docs/decisions/` in the house layout, the repo root in older ones): `DECISIONS.md`, `ASSUMPTIONS.md`, `HANDOFF.md`, plus any contract doc the user named. Read the entries that touch this session's work.
 
+- **If the docs tree is missing or partial, scaffold it now** — the `docs/README.md` index stub plus the six mandatory subfolders (`decisions/`, `reference/`, `sessions/`, `ops/`, `incoming/`, `old/`, each with a `.gitkeep`) — before this session files any document (project-artifacts owns the layout).
 - **Check `docs/incoming/` before starting.** An untriaged document there may already decide, or contradict, what this session is about to build. Routing it is a legitimate one-thing for a session — but do it deliberately, not as a side effect.
 
 - **A named contract doc wins over the conversation.** If the user's request contradicts a settled decision, say so and stop; do not silently follow the chat.

@@ -59,11 +59,25 @@ where to look.
   `CLAUDE.md`, `AGENTS.md`, `README.md`, `ONBOARDING.md` — and moving them breaks the
   thing that loads them.
 
-  **A very small project can keep these at the root**, and a project that already does
-  should not be reorganized as a drive-by. Moving an existing flat root into the tree is
-  its own deliberate act, recorded as a numbered decision. When you do move: **the ID
-  scheme already in use wins** over this skill's `D-001` format — back-references are
-  load-bearing, and renumbering breaks every one of them silently.
+- **Six folders are mandatory, and scaffolding them is the first act of doc work** —
+  `decisions/`, `reference/`, `sessions/`, `ops/`, `incoming/`, `old/`, each holding a
+  `.gitkeep` until real content arrives, plus the `docs/README.md` index stub. This
+  holds in a new project and an adopted one alike: before the first document is filed,
+  the full tree exists. Filing into a partial tree restarts root-sprawl one document at
+  a time, and a folder created only when first needed is a placement decision
+  re-litigated every session. `business/`, `legal/`, and `user/` are created at first
+  need — they depend on the project having those readers at all.
+
+- **A project that already keeps documents flat at the root is not reorganized as a
+  drive-by.** Scaffold the tree and file *new* documents into it; *moving* the existing
+  ones is its own deliberate act, recorded as a numbered decision. When you do move:
+  **the ID scheme already in use wins** over this skill's `D-001` format —
+  back-references are load-bearing, and renumbering breaks every one of them silently.
+
+- **Session files are cut to fit a chat session.** `sessions/` is organized by feature
+  or bug, and each file is chunked so one chunk executes in one conversation — a
+  session document too large to run in a single chat is two sessions mislabeled, and
+  it will be half-executed twice.
 
 - **Session documents drain into `old/` when they are spent.** Three cases, one rule —
   the plan stays lean, the record stays whole:

@@ -26,7 +26,10 @@ Establish what moved and what claims to describe it:
   truth now lives.
 - **The full doc surface:** `docs/README.md` (the index), every folder in the
   `docs/` tree, the root-pinned files (`README.md`, `CLAUDE.md`, `AGENTS.md`,
-  `ONBOARDING.md`), and any stray `.md` that escaped the tree.
+  `ONBOARDING.md`), and any stray `.md` that escaped the tree. Check the tree
+  itself while there: the six mandatory subfolders (`decisions/`, `reference/`,
+  `sessions/`, `ops/`, `incoming/`, `old/`) must all exist — an absent one is
+  drift in the tree, not just in the documents.
 - For each document that *describes current state*, ask one question: **does the
   thing it describes still exist as described?** Spot-check the load-bearing
   claims — commands, paths, names, statuses, flows — against the repo. Do not
@@ -72,7 +75,8 @@ runbooks, the README(s), `user/` docs, and the index.
 Three severities, three different permissions:
 
 - **Mechanical** — the index missing an entry, a dead link, a pointer to a
-  renamed file. Apply immediately and list what was applied. Asking permission
+  renamed file, a missing mandatory subfolder (scaffold it with a `.gitkeep`).
+  Apply immediately and list what was applied. Asking permission
   for a link fix trains the human to rubber-stamp, which erodes the gate that
   actually matters below.
 - **Substantive** — a doc describing a removed component, an invalidated

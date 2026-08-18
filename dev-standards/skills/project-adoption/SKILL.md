@@ -104,10 +104,15 @@ under the same headings in plain markdown):
   exists to record.
 - **`docs/README.md`** — the index. Write it last, once you know what exists.
 
-Place these in the `docs/` tree (`project-artifacts` owns the layout and the placement
-test). **Adopting the tree in a repo that keeps documents at the root is itself a
-decision** — record it, and move the existing documents in a separate, deliberate pass
-rather than scattering new artifacts into a layout the project hasn't adopted.
+**Scaffold the full `docs/` tree before writing the first artifact** — the six
+mandatory subfolders (`decisions/`, `reference/`, `sessions/`, `ops/`, `incoming/`,
+`old/`, each with a `.gitkeep`) plus the index stub; `project-artifacts` owns the
+layout and the placement test. Adoption gets no exemption from the scaffold: an
+adopted project without the tree stays unadopted in exactly the way that matters —
+its new record has nowhere predictable to live. **Moving the project's *existing*
+root-level documents into the tree is a separate, deliberate act** — record it as a
+decision and do it as its own pass; new artifacts go into the tree from the start
+either way.
 
 ### 6. Deliver the gap list
 
